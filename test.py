@@ -38,6 +38,7 @@ if __name__ == "__main__":
         pyautogui.hotkey('enter')
 
         check_termination_key()
+        print("test")
 
         automatic_click(821,965,duration=1)
         
