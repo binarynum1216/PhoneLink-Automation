@@ -29,7 +29,7 @@ if __name__ == "__main__":
 
         check_termination_key()
 
-
+        print("test")
 
         automatic_click(821,965,duration=1)
         with open('message.txt', 'r') as file:
