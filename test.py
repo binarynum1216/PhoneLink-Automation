@@ -29,9 +29,18 @@ if __name__ == "__main__":
 
         check_termination_key()
 
+        automatic_click(967,145,duration=1)
+        pyautogui.hotkey('ctrl','a')
+        time.sleep(0.4)
+        pyautogui.hotkey('delete')
+        pyautogui.write(str(row[0].value)) 
+        time.sleep(0.4)
+        pyautogui.hotkey('enter')
 
+        check_termination_key()
 
         automatic_click(821,965,duration=1)
+        
         with open('message.txt', 'r') as file:
             pyautogui.hotkey('ctrl','a')
             time.sleep(0.4)
@@ -39,6 +48,7 @@ if __name__ == "__main__":
 
             for line in file:
                 check_termination_key()
+                
                 pyautogui.write(line.strip())
                 time.sleep(0.4)
                 pyautogui.hotkey('shift', 'enter')
