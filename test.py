@@ -11,10 +11,6 @@ def automatic_double_click(x, y, duration=0):
     pyautogui.doubleClick(x, y, duration=duration)
     time.sleep(0.5)
 
-def automatic_click(x, y, duration=0):
-    pyautogui.click(x, y, duration=duration)
-    time.sleep(0.5)
-
 def check_termination_key():
     if keyboard.is_pressed('esc'):
         print("Stopping script...")
@@ -27,8 +23,8 @@ if __name__ == "__main__":
     for row in worksheet.iter_rows():
         time.sleep(1)
         check_termination_key()
-        time.sleep(1)
-        automatic_dousble_click(716,148,duration=1)
+
+        automatic_double_click(716,148,duration=1)
         time.sleep(0.4)
 
         check_termination_key()
